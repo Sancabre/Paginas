@@ -1,0 +1,459 @@
+:root{
+
+    --Principal: #0464c6;  
+    --PrincipalOscuro: #17A589;
+    --titulos: #67bbe8; 
+    --blanco: #ffffff; 
+    --negro: #212121;
+    --verde:#009688;  
+    --indigo:#012e67;  
+    --amarillo:#FFCA28;  
+    --verde2: #7CB342;
+
+
+
+    --FuentePrincipal: 'Montserrat', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-snap-type: mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }  /*no debe faltar en ningún proyecto*/
+body{
+    /* background-color: var(--Principal); */
+    /* background-image: linear-gradient(to top, var(--indigo) 0%, var(--blanco) 120% );  */
+    background-image: url(../img/PISCINA_FONDO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.6rem;/*tamaño ed la fuente*/
+    line-height: 1.5;/*interlineado*/
+}
+
+p{
+    font-size: 1.8rem;/*tamaño de fuente*/
+    font-family: Arial, Helvetica, sans-serif;/*tipo de fuente*/
+    color: var(--negro);/*color de la fuente*/
+}
+
+a{text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    
+
+
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+/*------------------------------Boton contacto---------------------------------*/
+.boton {
+    background-color: var(--amarillo);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-family: var(--FuentePrincipal);
+    text-decoration: none;
+    text-transform: uppercase; /*mayusculas*/
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+        
+    }
+}
+
+.boton:hover{
+     cursor: pointer
+     ;
+              
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    
+}
+
+/*---------------------------------Boton------------------------------------------------------------------------*/
+
+
+
+h1, h2, h3{
+    text-align: center; /*lostres vana a estar centrados*/
+    font-family: var(--FuentePrincipal); /*todos vana a tener la fuente específicada*/
+}
+
+
+/*se definenen los tamaños de cada uno*/
+h1{
+    font-size: 4rem;
+    color: var(--blanco);
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+/*HEADER*/
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco);
+    
+    
+}
+
+.header__logo{
+    margin-bottom: auto; /*margen arriba y abajo   Margen derecha e izquierda*/
+    width: 45rem;
+    height: 100%;
+    padding: 1rem;
+    
+}
+
+/**FOOTER**/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 1rem;
+    
+
+}
+.footer__texto{
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+/*NAVEGACIÓN*/
+.vg{
+    background-color: var(--amarillo);
+
+}
+.navegacion{
+     /*color de la franja de navegación*/
+    /* padding: 1rem 0;se da altura con 1rem arriba y abajo--- y el 0 es que no tiene distancia de izquierda y derecha */
+    display: flex;/*el flexbox es para elementos dentro de otro contenedor*/
+    flex-direction: column;
+
+    
+}
+@media (min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+        justify-content: space-between;    
+
+    }
+    
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-decoration: none;
+
+}
+
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    background-color: var(--blanco);
+    color:var(--amarillo);
+
+} 
+
+
+
+
+
+/* HERO */
+.hero {
+    background-image: url(../img/Aguas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    /* background-attachment: rgba(0,0,0, .7);
+    background-color: rgb(0 0 0 / 70%); */
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+    font-family: var(--FuentePrincipal);
+}
+.ubicacion{
+    display: flex;
+    align-items: baseline;
+}
+
+
+/* --------------------Servicios------------------------------------- */
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*en tres parte iguales */
+        /*grid-template-rows: 400px 800px; filas*/
+        
+        column-gap: 2rem;
+                
+      
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.sombra h2 {
+    color: var(--titulos);
+}
+
+.servicio h3{
+    color: var(--titulos);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.servicio p {
+    line-height: 1.5;
+    text-align: justify;
+    color: var(--negro);
+    
+
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--titulos);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+/* ------------------------------------------GRID index--------------------------- */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem; /*tiene la misma funcion de seapración hacia todas las direcciones*/
+    /* column-gap: 2rem; separación a los lados */
+    /* row-gap: 2rem; separación arriba y abajo */
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        
+    }
+}  /*lo que hace este MQ es que para dispositvos mas grandes se vean de 3 columnas */
+
+.producto_imagen{
+    width: 100%;
+
+}  
+
+
+/*--------------------------------------nosotros------------------------------*/
+.sombraNosotros{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    
+}
+
+
+.sombraNosotros h1{
+    color: var(--titulos);
+}
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    
+}
+
+@media (min-width: 768px) {
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    
+}
+.nosotros__contenido{
+    text-align: justify;
+}
+.nosotros__imagen{
+    grid-row: 1 / 2;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+
+}
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 1 / 2;
+
+    }
+}
+
+
+/*-----------------------------bloque-------------------------------------*/
+.comprar__titulo{
+    color: var(--titulos);
+}
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__imagen{
+    width: 70%;
+}
+
+.bloque__titulo{
+    margin: 0;
+    color: var(--titulos);
+}
+.bloque p{
+    text-align: justify;
+}
+
+
+/* -----------------------------------GridGaleria-------------------------------------------- */
+.gridGaleria{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem; /*tiene la misma funcion de seapración hacia todas las direcciones*/
+    /* column-gap: 2rem; separación a los lados */
+    /* row-gap: 2rem; separación arriba y abajo */
+}
+@media (min-width: 768px) {
+    .gridGaleria{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        
+    }
+}  /*lo que hace este MQ es que para dispositvos mas grandes se vean de 3 columnas */
+
+.producto_imagenG{
+    width: 100%;
+    height: 60%;
+    border-radius: 1rem;
+
+}  
+
+/* -----------------------------------Galeria-------------------------------------------- */
+
+.sombraGaleria{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.59);
+    background-color: var(--blanco);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    
+}
+.sombraGaleria h2{
+    color: var(--titulos);
+    margin: 1rem;
+    
+}
+
+.producto{
+    background-color: var(--Principal);
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+
+*
+.producto_nombre{
+    font-size: 2.5rem;
+
+}
+@media (min-width: 768px) {
+    .producto_nombre{
+        font-size: 4rem;
+    
+    }
+    
+}
+.producto_precio{
+    font-size: 2.8rem;
+    color: var(--blanco);
+
+}
+
+.producto_nombre,
+.producto_precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--blanco);
+}
+
+
+
+
